@@ -71,6 +71,8 @@ var count=0;
 
 
 function gameStart(){
+    $("#start").hide();
+    $("#question-container").show();
 console.log("started");
 
 }
