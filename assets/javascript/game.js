@@ -57,5 +57,12 @@ var questions = [{
 var correctAnswers=0;
 var worngAnswers=0;
 
+//var to track unanswered questions
+
+var noAnswer=0;
+
 //var to keep track of the current question displying
 var count=0;
+
+
+//***************FUNCTIONS**************** */
