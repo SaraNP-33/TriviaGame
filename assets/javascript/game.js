@@ -101,9 +101,30 @@ displayQuestion(randomQuestion[currentQuestion])
 
 function displayQuestion(question){
     $("#questions").text(question.question);
+
+    question.answers.forEach(answers => {
+        var button = document.createElement("button")
+        button.innerText= answers.text
+        button.classList.add("btn")
+
+        if(answers.correct){
+            button.dataset.correct=answers.correct
+        };
+
+        $("btn").click(selectAnswer);
+
+        console.log(answers.text);
+
+        $("#answer-btns").append(button)
+          
+    });
 }
 
 
+
+function selectAnswer(){
+
+}
 function resetGame(){}
 
 
