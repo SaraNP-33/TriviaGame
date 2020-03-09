@@ -66,3 +66,23 @@ var count=0;
 
 
 //***************FUNCTIONS**************** */
+
+//start by getting the start button Id with Jquery
+
+
+function gameStart(){
+console.log("started");
+
+}
+
+
+function nextQuestion(){}
+
+
+function displayQuestion(){}
+
+
+function resetGame(){}
+
+
+$("#start").click(gameStart);
