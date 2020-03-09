@@ -61,30 +61,52 @@ var worngAnswers=0;
 
 var noAnswer=0;
 
+//var to randomize questions
+let randomQuestion;
+
+// var to keep track of current question
+
+let currentQuestion;
+
 //var to keep track of the current question displying
 var count=0;
 
 
 //***************FUNCTIONS**************** */
 
-//start by getting the start button Id with Jquery
+//start with the Start Game function
+$(document).ready(function(){
+
 
 
 function gameStart(){
     $("#start").hide();
     $("#question-container").show();
+    randomQuestion = questions.sort(()=> Math.random() - .5);
+    currentQuestion = 0;
 console.log("started");
+
+nextQuestion();
 
 }
 
 
-function nextQuestion(){}
 
 
-function displayQuestion(){}
+
+function nextQuestion(){
+displayQuestion(randomQuestion[currentQuestion])
+}
+
+
+function displayQuestion(question){
+    $("#questions").text(question.question);
+}
 
 
 function resetGame(){}
 
 
 $("#start").click(gameStart);
+
+});
