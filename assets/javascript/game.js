@@ -77,7 +77,7 @@ var count=0;
 //start with the Start Game function
 $(document).ready(function(){
 
-
+    var answerButton = $("#answer-btns").empty();
 
 function gameStart(){
     $("#start").hide();
@@ -96,7 +96,9 @@ nextQuestion();
 
 function nextQuestion(){
 displayQuestion(randomQuestion[currentQuestion])
+
 }
+
 
 
 function displayQuestion(question){
@@ -116,14 +118,33 @@ function displayQuestion(question){
         console.log(answers.text);
 
         $("#answer-btns").append(button)
-          
+       
     });
 }
+
+//fetch the answer button ID
+
+
 
 
 
 function selectAnswer(){
+var selectButton= e.target;
+var correct = selectButton.dataset.correct;
 
+Array.from(answerButton.children).forEach(button => { 
+    setStatus(button, button.dataset.correct)
+})
+
+};
+
+function setStatus(element, correct){
+    if(correct){
+        element.classList.add('correct')
+    } else{
+        element.classList.add('wrong')
+    }
+    console.log(answers.text.correct[true]); 
 }
 function resetGame(){}
 
