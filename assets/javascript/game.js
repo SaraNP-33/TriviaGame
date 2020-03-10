@@ -77,7 +77,11 @@ var count=0;
 //start with the Start Game function
 $(document).ready(function(){
 
+
+// this will clear all the buttons from the html
     var answerButton = $("#answer-btns").empty();
+
+//this function will start the game and show the first questions
 
 function gameStart(){
     $("#start").hide();
@@ -92,14 +96,15 @@ nextQuestion();
 
 
 
-
+// this function will switch questions
+//add the timer on this function
 
 function nextQuestion(){
 displayQuestion(randomQuestion[currentQuestion])
 
 }
 
-
+//function to determine how the question ans buttons are displayed
 
 function displayQuestion(question){
     $("#questions").text(question.question);
@@ -113,8 +118,6 @@ function displayQuestion(question){
             button.dataset.correct=answers.correct
         };
 
-        
-
         console.log(answers.text);
 
         $("#answer-btns").append(button)
@@ -122,13 +125,16 @@ function displayQuestion(question){
     });
 }
 
-
+//function to allows us to click on the answer and have it know if
+//it the selection is correct or not
 
 function selectAnswer(){}
 
 
 
-
+//whenever we get to the end of the game we will show how many 
+//questions we got right, wrong or unanswered
+//show a restart button
 function resetGame(){
 
 }
