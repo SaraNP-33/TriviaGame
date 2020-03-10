@@ -113,7 +113,7 @@ function displayQuestion(question){
             button.dataset.correct=answers.correct
         };
 
-        $("btn").click(selectAnswer);
+        
 
         console.log(answers.text);
 
@@ -122,33 +122,19 @@ function displayQuestion(question){
     });
 }
 
-//fetch the answer button ID
+
+
+function selectAnswer(){}
 
 
 
 
+function resetGame(){
 
-function selectAnswer(){
-var selectButton= e.target;
-var correct = selectButton.dataset.correct;
-
-Array.from(answerButton.children).forEach(button => { 
-    setStatus(button, button.dataset.correct)
-})
-
-};
-
-function setStatus(element, correct){
-    if(correct){
-        element.classList.add('correct')
-    } else{
-        element.classList.add('wrong')
-    }
-    console.log(answers.text.correct[true]); 
 }
-function resetGame(){}
 
 
 $("#start").click(gameStart);
+$("btn").click(selectAnswer);
 
 });
