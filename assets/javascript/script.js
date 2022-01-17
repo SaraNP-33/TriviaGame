@@ -15,12 +15,14 @@ const timeEL=document.getElementById("time")
 const scoreEL=document.getElementById("score")
 const timeScoreEL= document.getElementById("time&Score")
 const btnGrid= document.getElementById("answer-btns")
+const initContainer=document.getElementById("initials")
 
 
 function startQuiz(){
     if(currentQindex === questions.length){
         clearInterval(counter) 
         console.log("score page to come")
+        endQuiz()
     }
   
 questionsContainer.style.display="block"
@@ -62,7 +64,12 @@ function checkAnswer(userChoice){
         time= time-5
     }
 }
+function endQuiz(){
+    clearInterval(counter)
+    questionsContainer.style.display="none"
+    initContainer.style.display="block"
 
+}
 
 
 
