@@ -1,6 +1,7 @@
 let currentQindex=0
 let time= questions.length * 15
 let counter;
+let score=0;
 
 const startbtn=document.getElementById("start")
 const startCont=document.getElementById("gameControls")
@@ -17,6 +18,10 @@ const btnGrid= document.getElementById("answer-btns")
 
 
 function startQuiz(){
+    if(currentQindex === questions.length){
+        clearInterval(counter) 
+        console.log("score page to come")
+    }
   
 questionsContainer.style.display="block"
 qText.textContent=questions[currentQindex].question
@@ -33,6 +38,7 @@ btn4.setAttribute("value",questions[currentQindex].answer4 )
 
 function startTimer(){
     timeScoreEL.style.display="block"
+    
     counter=setInterval(function(){
         time--
         timeEL.textContent= time
@@ -47,7 +53,13 @@ function checkAnswer(userChoice){
     if(userChoice===questions[currentQindex].correct){
         console.log("correct!");
         currentQindex++
+         score++
         startQuiz()
+    }
+    else{
+        currentQindex++
+        startQuiz()
+        time= time-5
     }
 }
 
