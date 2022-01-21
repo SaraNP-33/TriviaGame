@@ -2,6 +2,9 @@ let currentQindex=0
 let time= questions.length * 15
 let counter;
 let score =0
+let finalScore;
+let highScoreArr;
+
 
 const startbtn=document.getElementById("start")
 const startCont=document.getElementById("gameControls")
@@ -16,6 +19,8 @@ const scoreEL=document.getElementById("score")
 const timeScoreEL= document.getElementById("time&Score")
 const btnGrid= document.getElementById("answer-btns")
 const initContainer=document.getElementById("initials")
+const submitBtn= document.getElementById("btnInitials")
+const userInitials=document.getElementById("userInitials")
 
 
 function startQuiz(){
@@ -46,7 +51,7 @@ function startTimer(){
         time--
         timeEL.textContent= time
         if(time === 0){
-        clearInterval(counter)
+        endQuiz()
         }
     },1000)
 
@@ -54,12 +59,12 @@ function startTimer(){
 
 function checkAnswer(userChoice){
     if(userChoice===questions[currentQindex].correct){
-        // let btn=this.event.target
+        //let btn=this.event.target
         // btn.style.backgroundColor="#006400"
         console.log("correct!");
         currentQindex++
         score++
-         console.log(score)
+         //console.log(score)
          scoreEL.innerHTML=parseInt(score)
         startQuiz()
     }
@@ -69,19 +74,16 @@ function checkAnswer(userChoice){
         time= time-5
     }
 }
+
+
 function endQuiz(){
     clearInterval(counter)
     //questionsContainer.classList.remove("show")
     questionsContainer.style.display="none"
     initContainer.classList.remove("hide")
+    finalScore=score
 
 }
-
-
-
-
-
-
 
 
 
@@ -97,4 +99,19 @@ btnGrid.addEventListener("click", (event)=>{
     let btnClick= this.event.target.value
     console.log(btnClick)
     checkAnswer(btnClick)
+})
+
+submitBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+   const initials= userInitials.value.trim()
+   if(initials !== ""){
+       highScoreArr=JSON.parse(localStorage.getItem("highScores")) || []
+   var userScore={
+        initials:initials,
+        score:finalScore
+    }
+    highScoreArr.push(userScore)
+    console.log(highScoreArr)
+    localStorage.setItem("highScores",JSON.stringify(highScoreArr))
+}
 })
