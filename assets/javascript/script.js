@@ -1,7 +1,7 @@
 let currentQindex=0
 let time= questions.length * 15
 let counter;
-let score=0;
+let score =0
 
 const startbtn=document.getElementById("start")
 const startCont=document.getElementById("gameControls")
@@ -20,12 +20,13 @@ const initContainer=document.getElementById("initials")
 
 function startQuiz(){
     if(currentQindex === questions.length){
-        clearInterval(counter) 
-        console.log("score page to come")
         endQuiz()
+        clearInterval(counter) 
+        console.log(currentQindex, questions.length)
+        
     }
   
-questionsContainer.style.display="block"
+questionsContainer.classList.replace("hide", "show")
 qText.textContent=questions[currentQindex].question
 btn1.textContent=questions[currentQindex].answer1
 btn2.textContent=questions[currentQindex].answer2
@@ -39,7 +40,7 @@ btn4.setAttribute("value",questions[currentQindex].answer4 )
 }
 
 function startTimer(){
-    timeScoreEL.style.display="block"
+    timeScoreEL.classList.remove("hide")
     
     counter=setInterval(function(){
         time--
@@ -53,9 +54,13 @@ function startTimer(){
 
 function checkAnswer(userChoice){
     if(userChoice===questions[currentQindex].correct){
+        // let btn=this.event.target
+        // btn.style.backgroundColor="#006400"
         console.log("correct!");
         currentQindex++
-         score++
+        score++
+         console.log(score)
+         scoreEL.innerHTML=parseInt(score)
         startQuiz()
     }
     else{
@@ -66,8 +71,9 @@ function checkAnswer(userChoice){
 }
 function endQuiz(){
     clearInterval(counter)
+    //questionsContainer.classList.remove("show")
     questionsContainer.style.display="none"
-    initContainer.style.display="block"
+    initContainer.classList.remove("hide")
 
 }
 
