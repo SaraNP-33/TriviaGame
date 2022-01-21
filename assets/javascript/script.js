@@ -26,9 +26,8 @@ const userInitials=document.getElementById("userInitials")
 function startQuiz(){
     if(currentQindex === questions.length){
         endQuiz()
-        clearInterval(counter) 
-        console.log(currentQindex, questions.length)
-        
+        //clearInterval(counter) 
+        //console.log(currentQindex, questions.length)   
     }
   
 questionsContainer.classList.replace("hide", "show")
@@ -50,7 +49,7 @@ function startTimer(){
     counter=setInterval(function(){
         time--
         timeEL.textContent= time
-        if(time === 0){
+        if(time == 0){
         endQuiz()
         }
     },1000)
@@ -114,4 +113,5 @@ submitBtn.addEventListener("click",(e)=>{
     console.log(highScoreArr)
     localStorage.setItem("highScores",JSON.stringify(highScoreArr))
 }
+window.location.assign("scorePage.html")
 })
