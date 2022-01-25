@@ -9,6 +9,9 @@ for (let i=0; i<scores.length; i++){
     const scoreTd= document.createElement("td")
     const initTr= document.createElement("tr")
 
+    initTd.setAttribute("class", "has-text-centered")
+    scoreTd.setAttribute("class", "has-text-centered")
+
     initTd.append(scores[i].initials)
     scoreTd.append(scores[i].score)
     initTr.append(initTd, scoreTd)
