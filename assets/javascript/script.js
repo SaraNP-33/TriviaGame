@@ -41,6 +41,11 @@ btn1.setAttribute("value",questions[currentQindex].answer1 )
 btn2.setAttribute("value",questions[currentQindex].answer2 )
 btn3.setAttribute("value",questions[currentQindex].answer3 )
 btn4.setAttribute("value",questions[currentQindex].answer4 )
+
+btn1.setAttribute("class","button is-info is-rounded")
+btn2.setAttribute("class","button is-info is-rounded")
+btn3.setAttribute("class","button is-info is-rounded")
+btn4.setAttribute("class","button is-info is-rounded")
 }
 
 function startTimer(){

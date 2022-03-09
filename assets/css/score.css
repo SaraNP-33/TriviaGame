@@ -1,5 +1,16 @@
+body{
+    height: 100vh;
+    /* background-color: whitesmoke; */
+}
+
+
 .header{
     margin-bottom: 5vh;
     margin-top: 5vh;
+    background-color: whitesmoke;
    
+}
+
+.scores{
+    margin-top: 5vh;
 }

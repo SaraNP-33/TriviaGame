@@ -6,10 +6,10 @@ body{
 background-image: url("../images/triviabackground2.jpg");
 background-size: cover;
 width:100vw;
- height:100vh
+height:100vh
 }
 
-.navbar{
+.header{
     display:flex;
     justify-content:center;
     color:black;
@@ -26,6 +26,7 @@ border-radius:5px ;
 padding:20px;
 margin-top: 10%;
 box-shadow: 0 0 10px 2px ;
+
 }
 
 #questions{

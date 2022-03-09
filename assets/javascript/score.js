@@ -1,5 +1,6 @@
 let scores=JSON.parse(localStorage.getItem("highScores")) || []
-console.log(scores)
+// console.log(scores)
+const clearScores= document.getElementById("clear")
 
 function displayScore(){
     const table= document.getElementById("leaderTable")
@@ -21,3 +22,10 @@ for (let i=0; i<scores.length; i++){
 }
 
 displayScore()
+
+clearScores.addEventListener("click",(e)=>{
+    e.preventDefault()
+    localStorage.clear()
+    window.location.reload();
+})
+

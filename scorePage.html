@@ -11,10 +11,70 @@
     <title>LeaderBoard</title>
 </head>
 <body>
-<header class="container header">
+    <nav class="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="./assets/images/vectorstock_33678562.png"width="200" height="auto">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+      
+            <a class="navbar-item">
+              Documentation
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About
+                </a>
+                <a class="navbar-item">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="index.html" class="button is-info is-rounded">
+                  <strong>Play Again</strong>
+                </a>
+                <a id="clear" class="button is-light">
+                  Clear Scores
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+<div class="header">
     <h1 class="title is-1 has-text-centered ">Leaderboard</h1>
-</header>
-<main class="container">
+</div>
+<main class="container scores">
     <table class="table is-bordered is-striped is-fullwidth" >
         <thead>
             <tr>
