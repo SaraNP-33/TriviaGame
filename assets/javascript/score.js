@@ -5,9 +5,9 @@ const clearScores= document.getElementById("clear")
 
 function displayScore(){
     const table= document.getElementById("leaderTable")
-    if(scores !==""){
-        mainTable.classList.replace("clearTable", "showIt")
-    }
+    // if(scores !==""){
+    //     mainTable.classList.replace("clearTable", "showIt")
+    // }
     
 for (let i=0; i<scores.length; i++){
     const initTd=document.createElement("td")

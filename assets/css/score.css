@@ -2,20 +2,48 @@ body{
     height: 100vh;
     background-color: whitesmoke;
 }
-
-
+ nav{
+     padding:2rem;
+     padding-left: 4rem;
+     background-color:#698996 !important ;
+ }
+#play{
+    background-color: #EBBAB9;
+    color: whitesmoke;
+}
+#play:hover{
+    color:#698996
+}
+#clear{
+    background-color: #536A79;
+    color:whitesmoke;
+}
+#clear:hover{
+    background-color: whitesmoke;
+    color:#536A79
+}
 .header{
     margin-bottom: 5vh;
     margin-top: 5vh;
     background-color: whitesmoke;
     font-family: 'Sansita Swashed', cursive;
+    
    
+}
+.header h1{
+    color:slategrey;
 }
 
 .scores{
     margin-top: 5vh;
 }
-
+.color{
+    color: #698996 !important;
+    font-family: 'Sansita Swashed', cursive;
+}
+#leaderTable td{
+    color: #698996 !important;
+}
 /* .clearTable{
     visibility: hidden;
 }
