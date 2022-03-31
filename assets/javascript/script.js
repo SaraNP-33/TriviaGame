@@ -16,7 +16,7 @@ const btn3=document.getElementById("btn3")
 const btn4=document.getElementById("btn4")
 const timeEL=document.getElementById("time")
 const scoreEL=document.getElementById("score")
-const timeScoreEL= document.getElementById("time&Score")
+const timeScoreEL= document.getElementById("timeScore")
 const btnGrid= document.getElementById("answer-btns")
 const initContainer=document.getElementById("initials")
 const submitBtn= document.getElementById("btnInitials")
@@ -42,14 +42,14 @@ btn2.setAttribute("value",questions[currentQindex].answer2 )
 btn3.setAttribute("value",questions[currentQindex].answer3 )
 btn4.setAttribute("value",questions[currentQindex].answer4 )
 
-btn1.setAttribute("class","button is-info is-rounded")
-btn2.setAttribute("class","button is-info is-rounded")
-btn3.setAttribute("class","button is-info is-rounded")
-btn4.setAttribute("class","button is-info is-rounded")
+btn1.setAttribute("class","button btnCss is-rounded")
+btn2.setAttribute("class","button btnCss  is-rounded")
+btn3.setAttribute("class","button btnCss is-rounded")
+btn4.setAttribute("class","button btnCss is-rounded")
 }
 
 function startTimer(){
-    timeScoreEL.classList.remove("hide")
+    timeScoreEL.classList.replace("hide", "flex")
     
     counter=setInterval(function(){
         time--
@@ -84,7 +84,7 @@ function endQuiz(){
     clearInterval(counter)
     //questionsContainer.classList.remove("show")
     questionsContainer.style.display="none"
-    initContainer.classList.remove("hide")
+    initContainer.classList.replace("hide", "flex")
     finalScore=score
 
 }

@@ -13,30 +13,51 @@
     <title>Trivia Game</title>
 </head>
 <body>
+   
     <div class="header">
-       <h1 class="title is-1 has-text-centered ">Let's Trivia!!</h1>
+        <div id="headTitle"class="title is-1 has-text-centered">
+       <h1  class="title is-1 has-text-centered ">Trivia Time</h1>
     </div>
-    <div id="time&Score" class="hide">
+    <div id="timeScore" class="hide title is-2">
         <h1>Timer: <span id="time"></span></h1>
         <h3>Score:<span id="score"></span></h3>
     </div>
+</div>
     <div class ="container">
         <div id= "question-container" class="hide">
             <div id="questions">Questions</div>
             <div id="answer-btns" class="btn-grid">
-                <button class="button" id=btn1>Answer 1</button>
-                <button class="button"id=btn2>Answer 2</button>
-                <button class="button"id=btn3>Answer 3</button>
-                <button class="button"id=btn4>Answer 4</button>
+                <button class="button btnCss" id=btn1>Answer 1</button>
+                <button class="button btnCss"id=btn2>Answer 2</button>
+                <button class="button btnCss"id=btn3>Answer 3</button>
+                <button class="button btnCss"id=btn4>Answer 4</button>
             </div>
         </div>
         
         <div id="gameControls">
-            <button id="start" class="start-btn button is-info is-rounded">Start</button>
+            <div id="rules"class="content is-centered">
+                <h3 class="is-centered">Time to test your knowledge! Here are the rules:</h3>
+                <ul class="is-centered">
+                    <li>Click the button START to initiate the Game</li>
+                    <li>There will be 10 questions on multiple topics</li>
+                    <li>Each questions is worth 1 point if correct, and minus 5 seconds on the timer if wrong</li>
+                    <li>Total Time is 100 seconds</li>
+                    <li>Good Luck!!</li>
+                </ul>
+               
+            </div>
+            <button id="start" class="start-btn button is-rounded">Start</button>
+           
         </div>
+       
         <div id="initials" class="hide">
-           <input id="userInitials">
-            <button class="button is-info is-rounded"id=btnInitials>submit</button>
+            <div class="content" >
+                <h3 id="initText">Type your initials below and check the scoreboard!</h3>
+            </div>
+            <div id="submitInit">
+            <input id="userInitials" class="input" type="text" placeholder="Initials">
+            <button class="button is-rounded "id=btnInitials>submit</button>
+        </div>
         </div>
 
     </div>

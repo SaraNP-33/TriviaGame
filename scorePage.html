@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
       <!--Bulma css-->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <!-- css-->
@@ -14,7 +17,7 @@
     <nav class="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
-            <img src="./assets/images/vectorstock_33678562.png"width="200" height="auto">
+            <img src="./assets/images/vectorstock_33678562.png">
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -23,40 +26,7 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
-            </a>
-      
-            <a class="navbar-item">
-              Documentation
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  About
-                </a>
-                <a class="navbar-item">
-                  Jobs
-                </a>
-                <a class="navbar-item">
-                  Contact
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
-                </a>
-              </div>
-            </div>
-          </div>
-      
+  
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
@@ -72,10 +42,10 @@
         </div>
       </nav>
 <div class="header">
-    <h1 class="title is-1 has-text-centered ">Leaderboard</h1>
+    <h1 class="title is-1 has-text-centered ">Scoreboard</h1>
 </div>
 <main class="container scores">
-    <table class="table is-bordered is-striped is-fullwidth" >
+    <table id="showTable" class="table is-bordered is-striped is-fullwidth clearTable" >
         <thead>
             <tr>
                 <th class="has-text-centered">Initials</th>

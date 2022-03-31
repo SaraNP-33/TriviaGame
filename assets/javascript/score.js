@@ -1,9 +1,13 @@
 let scores=JSON.parse(localStorage.getItem("highScores")) || []
 // console.log(scores)
 const clearScores= document.getElementById("clear")
+// const mainTable= document.getElementById("showTable")
 
 function displayScore(){
     const table= document.getElementById("leaderTable")
+    if(scores !==""){
+        mainTable.classList.replace("clearTable", "showIt")
+    }
     
 for (let i=0; i<scores.length; i++){
     const initTd=document.createElement("td")

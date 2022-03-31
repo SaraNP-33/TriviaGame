@@ -3,25 +3,46 @@
   
 }
 body{
-background-image: url("../images/triviabackground2.jpg");
+background-color:whitesmoke;
 background-size: cover;
 width:100vw;
 height:100vh
 }
 
+
+
 .header{
     display:flex;
+    flex-direction: column;
     justify-content:center;
-    color:black;
+    color:whitesmoke;
     font-size: xx-large;
-    font-family: 'Girassol', cursive;
+    font-family:'arvo', serif;
+    background-color: #698996;
+    min-height: 20vh;
+    border-bottom: 2px solid black;
+    border-radius: 1.5rem;
    
-
+    
 }
+#headTitle h1{
+    margin-top: 3vw;
+    color:whitesmoke; 
+}
+#timeScore{
+    flex-direction: row;
+    justify-content: space-around;
+    color: whitesmoke;
+    padding-bottom: 2vw;
+}
+.flex{
+    display: flex;
+}
+
 .container{
 display: flex;
 justify-content: center;
-background-color: white;
+background-color: whitesmoke;
 border-radius:5px ;
 padding:20px;
 margin-top: 10%;
@@ -29,9 +50,37 @@ box-shadow: 0 0 10px 2px ;
 
 }
 
+#rules h3{
+    font-family:'arvo', serif;
+    color:slategrey;  
+}
+#rules ul{
+    font-family:'arvo', serif;
+    color:slategrey; 
+    list-style: none; 
+    
+}
+.start-btn{
+    font-size:2rem;
+    font-weight:bold;
+    margin:auto;
+    background-color: #EBBAB9 !important;
+    color: whitesmoke;
+    font-family: 'Arvo', serif;
+}
+.start-btn:hover{
+    color:#698996!important;
+}
+#gameControls{
+    display: flex;
+   flex-direction: column;
+}
+   
+
 #questions{
     font-family:'arvo', serif;
     font-size: xx-large;
+    color:slategrey; 
 }
 
 .btn-grid{
@@ -39,39 +88,52 @@ box-shadow: 0 0 10px 2px ;
     grid-template-columns: repeat(2, auto);
     gap:10px;
     margin:20px 0;
+    
 }
-.btn{
-    background-color:#87cefa ;
-    border: 2px solid #000080;
-    border-radius: 5px;
-    padding:5px 10px;
-    font-size: larger;
-    font-family: 'Arvo', serif;
+.btnCss{
+    background-color:#536A79 !important ;
+    border: 2px solid #698996;
+    font-family: 'arvo', serif;
+    color:whitesmoke;
 }
-.btn:hover{
-    background-color:#8b008b;
-    color:#ffffff;
+.btnCss:hover{
+    background-color:#EBBAB9 !important;
+    color:slategrey;
+}
+#initials{
+    flex-direction: column;
+    align-items: center; 
+    height:20vh;
+    
+}
+#initText{
+    color:slategrey;
+}
+#submitInit{
+    display: flex;
+    flex-direction: row;
+}
+#btnInitials{
+    background-color: #EBBAB9 !important;
+    margin-left: 2vw;
+    color:whitesmoke;
+    font-family: 'arvo', serif;
+}
+#btnInitials:hover{
+    color:#698996;
 }
 
-.btn.correct{
+/* .btn.correct{
     background-color:#006400;
     color:#ffffff
-}
+} */
 
-.btn.wrong{
+/* .btn.wrong{
     background-color: #8b0000;
     color:#ffffff;
-}
-.start-btn{
-    font-size:2rem;
-    font-weight:bold;
-    padding:10px 20px;
-}
-.gameControls{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+} */
+
+    
 .hide{
  display:none;
 }
