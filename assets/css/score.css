@@ -1,14 +1,27 @@
 body{
     height: 100vh;
     background-color: whitesmoke;
+   
 }
  nav{
-     padding:2rem;
-     padding-left: 4rem;
+     /* padding:2rem;
+     padding-left: 4rem; */
      background-color:#698996 !important ;
+     border-bottom: 2px solid black;
+     border-radius: 0.5rem;
+   
+ }
+
+ .logo{
+     width:200px;
+    
+ }
+ #logoText{
+    color: whitesmoke;
+    font-family: 'Sansita Swashed', cursive;
  }
 #play{
-    background-color: #EBBAB9;
+    background-color: #dea947;
     color: whitesmoke;
 }
 #play:hover{
@@ -35,7 +48,7 @@ body{
 }
 
 .scores{
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 .color{
     color: #698996 !important;

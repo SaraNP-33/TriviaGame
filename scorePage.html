@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96x96.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
     <nav class="navbar " role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <!-- <a class="navbar-item" href="https://bulma.io"> -->
-            <!-- <img src="./assets/images/vectorstock_33678562.png" width="150px" height="100px" background-color="transparent"> -->
+            <img  class="logo"src="./assets/images/341340-middle.png">
           <!-- </a> -->
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -26,7 +27,13 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-  
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <h1 id="logoText" class="navbar-item is-size-1">
+              Scoreboard
+            </h1>
+            </div>
+          </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
@@ -41,9 +48,9 @@
           </div>
         </div>
       </nav>
-<div class="header">
+<!-- <div class="header">
     <h1 class="title is-1 has-text-centered ">Scoreboard</h1>
-</div>
+</div> -->
 <main class="container scores">
     <table id="showTable" class="table is-bordered is-striped is-fullwidth clearTable" >
         <thead>
