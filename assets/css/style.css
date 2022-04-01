@@ -140,3 +140,10 @@ box-shadow: 0 0 10px 2px ;
 .show{
     display:block;
 }
+
+@media (max-width:1023px){
+    .container{
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+}
