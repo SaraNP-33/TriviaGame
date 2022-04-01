@@ -26,8 +26,6 @@ const userInitials=document.getElementById("userInitials")
 function startQuiz(){
     if(currentQindex === questions.length){
         endQuiz()
-        //clearInterval(counter) 
-        //console.log(currentQindex, questions.length)   
     }
   
 questionsContainer.classList.replace("hide", "show")
@@ -63,12 +61,10 @@ function startTimer(){
 
 function checkAnswer(userChoice){
     if(userChoice===questions[currentQindex].correct){
-        //let btn=this.event.target
-        // btn.style.backgroundColor="#006400"
+        
         console.log("correct!");
         currentQindex++
         score++
-         //console.log(score)
          scoreEL.innerHTML=parseInt(score)
         startQuiz()
     }
@@ -82,7 +78,6 @@ function checkAnswer(userChoice){
 
 function endQuiz(){
     clearInterval(counter)
-    //questionsContainer.classList.remove("show")
     questionsContainer.style.display="none"
     initContainer.classList.replace("hide", "flex")
     finalScore=score

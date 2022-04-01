@@ -122,17 +122,6 @@ box-shadow: 0 0 10px 2px ;
 #btnInitials:hover{
     color:#698996;
 }
-
-/* .btn.correct{
-    background-color:#006400;
-    color:#ffffff
-} */
-
-/* .btn.wrong{
-    background-color: #8b0000;
-    color:#ffffff;
-} */
-
     
 .hide{
  display:none;
@@ -149,4 +138,10 @@ box-shadow: 0 0 10px 2px ;
     #timeScore{
         font-size:1.5rem !important;
     }
+    .btnCss:hover{
+        background-color:#536A79 !important;
+        color:whitesmoke;
+    }
+    
 }
+
