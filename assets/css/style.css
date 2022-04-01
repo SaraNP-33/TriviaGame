@@ -146,4 +146,7 @@ box-shadow: 0 0 10px 2px ;
         margin-left: 3vw;
         margin-right: 3vw;
     }
+    #timeScore{
+        font-size:1.5rem !important;
+    }
 }
