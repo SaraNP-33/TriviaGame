@@ -66,6 +66,7 @@ function checkAnswer(userChoice){
         currentQindex++
         score++
          scoreEL.innerHTML=parseInt(score)
+        
         startQuiz()
     }
     else{
