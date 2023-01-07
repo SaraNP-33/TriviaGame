@@ -81,7 +81,7 @@ function endQuiz(){
     clearInterval(counter)
     questionsContainer.style.display="none"
     initContainer.classList.replace("hide", "flex")
-    finalScore=score
+    finalScore=time
 
 }
 
